@@ -1,0 +1,61 @@
+﻿/*透明度 (Transparency)*/
+.semitransparentBox {
+    background: rgb(170,240,0);
+    background: rgba(170,240,0,0.3); /*CSS3 多一個 rgba 選項，提供 alpha 參數的配置*/
+}
+
+.semitransparentBox {
+    background: rgb(170,240,0);
+    opacity: 0.3; /* opacity 與 alpha 相同可以控制元素透明度*/
+    /*如果 1. 製作一個以上半透明顏色 2. 不指定顏色時 3. 半透明圖片(浮水印) 4. 搭配轉場動畫效果。*/
+}
+
+/*弧形邊角 (Rounded Corners)*/
+.rundedBoxRed {
+    background: red;
+    border-radius: 25px 50px 25px 85px;
+}
+
+.rundedBoxBlue {
+    background: blue;
+    border-top-left-radius: 150px 30px;
+    border-top-right-radius: 150px 30px;
+}
+
+.decoratedBox {
+    margin: 50px;
+    padding: 20px;
+    background-image: url("../Images/b2blogo2.png"), url("../Images/footer-logo.png"), url("../Images/newegg-business-77706177.jpg");
+    background-position: left top, left top, right bottom;
+    background-repeat: no-repeat, repeat-x, no-repeat;
+}
+
+.text-shadow {
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: gray 10px 10px 7px;
+}
+
+
+/*練習不同的漸層效果*/
+.colorBelendBox {
+    /*線性漸層*/
+    /*background: linear-gradient(from top, white, blue);*/
+    /*background: linear-gradient(from top left, white, lightblue);*/
+    /*background: linear-gradient(from top, red, orange, yellow);*/
+    /*background: linear-gradient(from top, red 0%, orange 20%, yellow 80%);*/
+    /*放射狀漸層*/
+    /*background: radial-gradient(circle, white, lightblue);*/
+    background: -webkit-radial-gradient(circle, yellow,green);
+    /*background: radial-gradient(circle, yellow 10%, green 70%, blue, white, black);*/
+    /*background: radial-gradient(circle at 90% 5%, white, lightblue);*/
+    /*循環漸層*/
+    /*background: repeating-radial-gradient(circle, yellow, green);*/
+    /*background: repeating-radial-gradient(circle, yellow, green 10%);*/
+    /*background: repeating-radial-gradient(to top, red, orange, white, yellow, red 30px);*/
+}
+
+
+.groove_order {
+    border: groove;
+}
