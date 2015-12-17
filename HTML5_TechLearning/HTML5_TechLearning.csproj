@@ -173,6 +173,15 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\CSS3Test_Sean\BetterBoxes.css" />
+    <Content Include="Content\Images\b2blogo2.png" />
+    <Content Include="Content\Images\footer-logo.png" />
+    <Content Include="Content\Images\newegg-business-77706177.jpg" />
+    <Content Include="Content\Images\SkyLine_Afternoon.jpg" />
+    <Content Include="Content\Images\SkyLine_Morning.jpg" />
+    <Content Include="Content\Images\SkyLine_Night.jpg" />
+    <Content Include="Content\CSS3Test_Sean\Transition.css" />
+    <Content Include="CSS3Test_Sean\BetterBoxes.html" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -191,7 +200,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Sean\CSS3Transition.html" />
+    <Content Include="CSS3Test_Sean\Transition.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
