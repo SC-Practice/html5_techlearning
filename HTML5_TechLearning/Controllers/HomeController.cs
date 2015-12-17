@@ -26,5 +26,10 @@ namespace HTML5_TechLearning.Controllers
 
             return View();
         }
+
+        public ActionResult Daniel()
+        {
+            return View();
+        }
     }
 }
