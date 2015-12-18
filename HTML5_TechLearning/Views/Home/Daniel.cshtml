@@ -7,15 +7,27 @@
 <h2>Daniel Test</h2>
 <hr />
 
-<h4>測試1: Transition(轉場動畫): <strong>2015/12/17</strong></h4>
+<h4>練習1: Transition(轉場動畫): <strong>2015/12/17</strong></h4>
 <input value="切換 Div 類別" type="button" onclick="pushButton()" />
 <div id="block1" class="hoverbox">Hover me!!</div>
+
+<hr />
+<h4>練習2: Transform(旋轉動畫): <strong>2015/12/18</strong></h4>
+<div id="block2">
+    <p>就只是一個 div</p>
+    <p>可以用滑鼠玩弄它</p>
+</div>
+<input value="旋轉180度" type="button" onclick="pushButton2()" />
 
 @section scripts
 {
     <script>
         function pushButton() {
             $("#block1").toggleClass("yellowbox");
+        }
+
+        function pushButton2() {
+            $("#block2").toggleClass("rotate180");
         }
     </script>
 }
