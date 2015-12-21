@@ -182,6 +182,8 @@
     <Content Include="Content\Images\SkyLine_Morning.jpg" />
     <Content Include="Content\Images\SkyLine_Night.jpg" />
     <Content Include="Content\CSS3Test_Sean\Transition.css" />
+    <Content Include="Content\Images\TeamMember\Daniel.jpg" />
+    <Content Include="Content\TeamMember.css" />
     <Content Include="CSS3Test_Sean\BetterBoxes.html" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -203,6 +205,9 @@
     <Content Include="Scripts\_references.js" />
     <Content Include="CSS3Test_Sean\Transition.html" />
     <Content Include="Views\Home\Daniel.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\Home\TeamMember.cshtml">
       <SubType>Code</SubType>
     </Content>
     <Content Include="Web.config" />
