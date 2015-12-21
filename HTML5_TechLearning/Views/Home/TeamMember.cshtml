@@ -1,30 +1,31 @@
-﻿@{
+﻿@model HTML5_TechLearning.Models.TeamMember.TeamMemberViewModel
+
+@{
     ViewBag.Title = "Team Member";
 }
 
 <link href="@Url.Content("~/Content/TeamMember.css")" rel="stylesheet" />
 
-<h2>TW B2B TEAM</h2>
-<div class="teamGroup">
-    <h3>3W</h3>
-    <div class="row">
-        <div class="col-md-3">
+<h2>@Model.PageTitle</h2>
+
+@foreach (var group in Model.Groups)
+{
+    <div class="teamGroup">
+        <h3>@group.Title</h3>
+        <div class="row">
+            @{
+    int i = 0;
+    foreach (var member in group.Members)
+    {
+        i++;
+        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
             <div class="member">
-                <p><img src="@Url.Content("~/Content/Images/TeamMember/Daniel.jpg")" alt="Daniel" /></p>
-                <p>11_陳瑩聰(Daniel)</p>
+                <p><img src="@Url.Content(string.Format("~/Content/Images/TeamMember/{0}",member.ImageFileName))" alt="@member.NickName" /></p>
+                <p>@string.Format("{0:00}_{1}({2})", i, member.ChineseName, member.NickName)</p>
             </div>
         </div>
-        <div class="col-md-3">
-            <div class="member">
-                <p><img src="@Url.Content("~/Content/Images/TeamMember/Daniel.jpg")" alt="Daniel" /></p>
-                <p>11_陳瑩聰(Daniel)</p>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="member">
-                <p><img src="@Url.Content("~/Content/Images/TeamMember/Daniel.jpg")" alt="Daniel" /></p>
-                <p>11_陳瑩聰(Daniel)</p>
-            </div>
+    }
+            }
         </div>
     </div>
-</div>
+}

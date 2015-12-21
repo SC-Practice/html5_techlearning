@@ -167,6 +167,9 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\TeamMember\GroupInfo.cs" />
+    <Compile Include="Models\TeamMember\MemberInfo.cs" />
+    <Compile Include="Models\TeamMember\TeamMemberViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -182,6 +185,7 @@
     <Content Include="Content\Images\SkyLine_Morning.jpg" />
     <Content Include="Content\Images\SkyLine_Night.jpg" />
     <Content Include="Content\CSS3Test_Sean\Transition.css" />
+    <Content Include="Content\Images\TeamMember\comingsoon.png" />
     <Content Include="Content\Images\TeamMember\Daniel.jpg" />
     <Content Include="Content\TeamMember.css" />
     <Content Include="CSS3Test_Sean\BetterBoxes.html" />

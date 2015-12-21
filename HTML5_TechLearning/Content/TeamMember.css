@@ -12,17 +12,22 @@
     border-radius: 5px;
     background: white;
     text-align: center;
-    width: 100px;
+    box-shadow: 5px 5px 5px #888888;
+    margin: 10px;
 }
 
     .member img {
         box-shadow: 5px 5px 5px #888888;
+        width: 62px;
+        height: 89px;
     }
 
     .member:hover {
-        -moz-transform: scale(2.2);
-        -ms-transform: scale(2.2);
-        -o-transform: scale(2.2);
-        -webkit-transform: scale(2.2);
-        transform: scale(2.2);
+        -moz-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+        -o-transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+        z-index: 9999;
+        position: relative;
     }
