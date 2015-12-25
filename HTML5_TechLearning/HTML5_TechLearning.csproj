@@ -161,6 +161,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\SeanController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -176,7 +177,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\CSS3Test_Sean\BetterBoxes.css" />
+    <Content Include="Content\Sean\BetterBoxes.css" />
     <Content Include="Content\Daniel.css" />
     <Content Include="Content\Images\b2blogo2.png" />
     <Content Include="Content\Images\footer-logo.png" />
@@ -184,11 +185,10 @@
     <Content Include="Content\Images\SkyLine_Afternoon.jpg" />
     <Content Include="Content\Images\SkyLine_Morning.jpg" />
     <Content Include="Content\Images\SkyLine_Night.jpg" />
-    <Content Include="Content\CSS3Test_Sean\Transition.css" />
+    <Content Include="Content\Sean\Transition.css" />
     <Content Include="Content\Images\TeamMember\comingsoon.png" />
     <Content Include="Content\Images\TeamMember\Daniel.jpg" />
     <Content Include="Content\TeamMember.css" />
-    <Content Include="CSS3Test_Sean\BetterBoxes.html" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -207,7 +207,6 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="CSS3Test_Sean\Transition.html" />
     <Content Include="Views\Home\Daniel.cshtml">
       <SubType>Code</SubType>
     </Content>
@@ -249,6 +248,8 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Sean\BetterBoxes.cshtml" />
+    <Content Include="Views\Sean\Transition.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

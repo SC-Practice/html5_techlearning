@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Transition";
+    Layout = "~/Views/Shared/_Layout.cshtml";    
+}
+
+<link href="~/Content/Sean/Transition.css" rel="stylesheet" />
+
+<h1>This is CSS3 Test Page.</h1>
+
+<div>
+    <img src="../Content/Images/SkyLine_Morning.jpg" alt="Daytime view" />
+    <img id="nightImage" src="../Content/Images/SkyLine_Night.jpg" alt="Night-time view" class="transparent" />
+</div>
+<button class="btn_toDay" onclick="toNight()">Go to night</button>
+<button class="btn_toNight" onclick="toDay()">Go to Day</button>
+
+
+<script>
+    function toNight() {
+        var nightImage = document.getElementById("nightImage");
+        nightImage.className = "solid";
+
+    }
+
+    function toDay() {
+        var nightImage = document.getElementById("nightImage");
+        nightImage.className = "transparent";
+    }
+</script>
