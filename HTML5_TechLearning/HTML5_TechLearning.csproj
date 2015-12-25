@@ -250,6 +250,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Sean\BetterBoxes.cshtml" />
     <Content Include="Views\Sean\Transition.cshtml" />
+    <Content Include="Views\Sean\DragAndDrop.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
