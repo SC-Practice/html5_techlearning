@@ -62,3 +62,16 @@
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
 }
+
+#divDrop {
+    background: pink;
+    border: dashed 1px gray;
+    line-height: 60px;
+    height: 60px;
+    text-align: center;
+}
+
+#imgDrag {
+    box-shadow: 5px 5px 5px #888888;
+    border: solid 1px gray;
+}

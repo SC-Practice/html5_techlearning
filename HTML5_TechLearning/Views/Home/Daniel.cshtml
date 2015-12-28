@@ -19,6 +19,13 @@
 </div>
 <input value="旋轉180度" type="button" onclick="pushButton2()" />
 
+<hr />
+<h4>練習3: Drag&amp;Drop(拖曳文字資料): <strong>2015/12/28</strong></h4>
+<img id="imgNoProcessDrag" src="@Url.Content("~/Content/Images/newegg-business-77706177.jpg")">
+<img id="imgDrag" src="@Url.Content("~/Content/Images/footer-logo.png")" ondragstart="processDrag(event)">
+<div id="divDrop" ondrop="processDrop(event)" ondragover="allowDrop(event)">把任何東西拖進來,看文字資料是什麼</div>
+<div id="divMessage">(Message)</div>
+
 @section scripts
 {
     <script>
@@ -28,6 +35,28 @@
 
         function pushButton2() {
             $("#block2").toggleClass("rotate180");
+        }
+
+        // 如果沒存id, 預設就會存圖檔的實體路徑(連結); 如果圖檔沒有id, text也會讀到連結.
+        function processDrag(event) {
+            event.dataTransfer.setData("text", event.target.id);
+        }
+
+        // 只要Drag物件停留在上面,就會不斷觸發這個事件.
+        function allowDrop(event)
+        {
+            console.log("allowDrop.");
+            $("#divMessage").text("allowDrop.");
+            event.preventDefault(); // 如果沒有這行, 放開時就不會觸發自訂的onDrop事件(加了這行, 也會改變drag時滑鼠的圖案).
+        }
+
+        // 從桌面丟上來的檔案一樣會觸發此事件.
+        function processDrop(event) {
+            console.log("processDrop.");
+            $("#divMessage").text("processDrop.");
+            event.preventDefault(); // 如果沒有這行, 就會執行預設動作(有時會造成網頁跳轉)
+            var data = event.dataTransfer.getData("text");
+            $("#divDrop").text(data);
         }
     </script>
 }
