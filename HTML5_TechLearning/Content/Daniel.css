@@ -75,3 +75,10 @@
     box-shadow: 5px 5px 5px #888888;
     border: solid 1px gray;
 }
+
+#divDropFile {
+    border: dotted 2px gray;
+    line-height: 100px;
+    height: 100px;
+    text-align: center;
+}

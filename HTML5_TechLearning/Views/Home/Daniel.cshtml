@@ -7,24 +7,29 @@
 <h2>Daniel Test</h2>
 <hr />
 
-<h4>練習1: Transition(轉場動畫): <strong>2015/12/17</strong></h4>
-<input value="切換 Div 類別" type="button" onclick="pushButton()" />
-<div id="block1" class="hoverbox">Hover me!!</div>
-
+<h4>練習4: Drag&amp;Drop(拖曳桌面檔案): <strong>2015/12/28</strong></h4>
+<div id="divDropFile" ondrop="processDropFile(event)" ondragover="allowDrop(event)">從檔案總管拖檔案進來...</div>
+<div id="divFileInfo">(檔案資訊)</div>
 <hr />
+
+<h4>練習3: Drag&amp;Drop(拖曳文字資料): <strong>2015/12/28</strong></h4>
+<img id="imgNoProcessDrag" src="@Url.Content("~/Content/Images/newegg-business-77706177.jpg")">
+<img id="imgDrag" src="@Url.Content("~/Content/Images/footer-logo.png")" ondragstart="processDrag(event)">
+<div id="divDrop" ondrop="processDrop(event)" ondragover="allowDrop(event)">把任何東西拖進來,看文字資料是什麼</div>
+<div id="divMessage">(Message)</div>
+<hr />
+
 <h4>練習2: Transform(旋轉動畫): <strong>2015/12/18</strong></h4>
 <div id="block2">
     <p>就只是一個 div</p>
     <p>可以用滑鼠玩弄它</p>
 </div>
 <input value="旋轉180度" type="button" onclick="pushButton2()" />
-
 <hr />
-<h4>練習3: Drag&amp;Drop(拖曳文字資料): <strong>2015/12/28</strong></h4>
-<img id="imgNoProcessDrag" src="@Url.Content("~/Content/Images/newegg-business-77706177.jpg")">
-<img id="imgDrag" src="@Url.Content("~/Content/Images/footer-logo.png")" ondragstart="processDrag(event)">
-<div id="divDrop" ondrop="processDrop(event)" ondragover="allowDrop(event)">把任何東西拖進來,看文字資料是什麼</div>
-<div id="divMessage">(Message)</div>
+
+<h4>練習1: Transition(轉場動畫): <strong>2015/12/17</strong></h4>
+<input value="切換 Div 類別" type="button" onclick="pushButton()" />
+<div id="block1" class="hoverbox">Hover me!!</div>
 
 @section scripts
 {
@@ -39,7 +44,7 @@
 
         // 如果沒存id, 預設就會存圖檔的實體路徑(連結); 如果圖檔沒有id, text也會讀到連結.
         function processDrag(event) {
-            event.dataTransfer.setData("text", event.target.id);
+            event.dataTransfer.setData("text/plain", event.target.id);
         }
 
         // 只要Drag物件停留在上面,就會不斷觸發這個事件.
@@ -57,6 +62,35 @@
             event.preventDefault(); // 如果沒有這行, 就會執行預設動作(有時會造成網頁跳轉)
             var data = event.dataTransfer.getData("text");
             $("#divDrop").text(data);
+        }
+
+        function processDropFile(event) {
+            console.log("processDropFile.");
+            event.preventDefault(); // 如果沒有這行, 就會執行預設動作(有時會造成網頁跳轉)
+
+            //如果檔案清單不存在, 代表用戶拖的不是檔案.
+            var fileCount = event.dataTransfer.files.length;
+            if (fileCount == 0)
+            {
+                $("#divFileInfo").text("你拖拉的不是檔案!!");
+                return;
+            }
+
+            var outputHtml = "<p>你拖了 " + fileCount + " 個檔案:</p>";
+
+            for (var i = 0; i < fileCount; i++)
+            {
+                var file = event.dataTransfer.files[i];
+                console.log(file);
+
+                //把檔案的資訊變成html文字.
+                outputHtml += "<p>編號:" + (i+1) + "</p>";
+                outputHtml += "<p>檔名:" + file.name + "</p>";
+                outputHtml += "<p>型態:" + file.type + "</p>";
+            }
+
+            //把html文字加入div中.
+            $("#divFileInfo").html(outputHtml);
         }
     </script>
 }
