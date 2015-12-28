@@ -5,23 +5,22 @@
 <div class="jumbotron">
     <h1>HTML5 - Daily Task</h1>
     <p class="lead">這個專案存放每個人的練習程式碼</p>
-    @*<p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
 </div>
 
 <div class="row">
     <div class="col-md-4">
         <h2>Sean的練習</h2>
-        <p>@Html.ActionLink("Transition", "Transition", "Sean", null, new { @class = "btn btn-default" })</p>
-        <p>@Html.ActionLink("BetterBoxes", "BetterBoxes", "Sean", null, new { @class = "btn btn-default" })</p>
-        <p>@Html.ActionLink("DragAndDrop", "DragAndDrop", "Sean", null, new { @class = "btn btn-default" })</p>
+        <p>@Html.ActionLink("Transition »", "Transition", "Sean", null, new { @class = "btn btn-default" })</p>
+        <p>@Html.ActionLink("BetterBoxes »", "BetterBoxes", "Sean", null, new { @class = "btn btn-default" })</p>
+        <p>@Html.ActionLink("DragAndDrop »", "DragAndDrop", "Sean", null, new { @class = "btn btn-default" })</p>
     </div>
     <div class="col-md-4">
         <h2>Daniel的練習</h2>
-        <p><a class="btn btn-default" href="/Home/Daniel">雜項測試 &raquo;</a></p>
-        <p><a class="btn btn-default" href="/Home/TeamMember">TeamMember &raquo;</a></p>
+        <p>@Html.ActionLink("雜項測試 »", "Daniel", "Home", null, new { @class = "btn btn-default" })</p>
+        <p>@Html.ActionLink("TeamMember »", "TeamMember", "Home", null, new { @class = "btn btn-default" })</p>
     </div>
     <div class="col-md-4">
         <h2>Chris的練習</h2>
-        <p><a class="btn btn-default" href="">進入點 &raquo;</a></p>
+        <p>@Html.ActionLink("進入點 »", "Index", "Home", null, new { @class = "btn btn-default" })</p>
     </div>
 </div>
