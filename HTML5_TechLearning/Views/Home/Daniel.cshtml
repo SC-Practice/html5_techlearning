@@ -7,7 +7,7 @@
 <h2>Daniel Test</h2>
 <hr />
 
-<h4>練習4: Drag&amp;Drop(拖曳桌面檔案): <strong>2015/12/28</strong></h4>
+<h4>練習4: Drag&amp;Drop(拖曳桌面檔案改變背景): <strong>2015/12/29</strong></h4>
 <div id="divDropFile" ondrop="processDropFile(event)" ondragover="allowDrop(event)">從檔案總管拖檔案進來...</div>
 <div id="divFileInfo">(檔案資訊)</div>
 <hr />
@@ -44,7 +44,7 @@
 
         // 如果沒存id, 預設就會存圖檔的實體路徑(連結); 如果圖檔沒有id, text也會讀到連結.
         function processDrag(event) {
-            event.dataTransfer.setData("text/plain", event.target.id);
+            event.dataTransfer.setData("text/plain", event.target.id); // "text" 和 "text/plain" 是同義詞.
         }
 
         // 只要Drag物件停留在上面,就會不斷觸發這個事件.
@@ -77,6 +77,7 @@
             }
 
             var outputHtml = "<p>你拖了 " + fileCount + " 個檔案:</p>";
+            var isSetImage = false;
 
             for (var i = 0; i < fileCount; i++)
             {
@@ -87,10 +88,29 @@
                 outputHtml += "<p>編號:" + (i+1) + "</p>";
                 outputHtml += "<p>檔名:" + file.name + "</p>";
                 outputHtml += "<p>型態:" + file.type + "</p>";
+
+                //判斷如果是圖檔才處理, 且只處理第一張.
+                if (!isSetImage && file.type.match("image") != null)
+                {
+                    processImgFile(file);
+                    isSetImage = true;
+                }
             }
 
             //把html文字加入div中.
             $("#divFileInfo").html(outputHtml);
+        }
+
+        function processImgFile(file) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                //這邊可能是等到檔案讀完才會執行的call back function.
+                $("#divDropFile").css("background-image", "url('" + e.target.result + "')");
+            };
+
+            reader.readAsDataURL(file);
+            $("#divDropFile").text(""); //清空提示文字.
         }
     </script>
 }
