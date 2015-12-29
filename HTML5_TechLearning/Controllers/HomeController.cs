@@ -42,5 +42,11 @@ namespace HTML5_TechLearning.Controllers
 
             return View(model);
         }
+
+        public ActionResult WebWorker()
+        {
+            return View();
+        }
+
     }
 }
