@@ -254,6 +254,7 @@
     <Content Include="Views\Sean\Transition.cshtml" />
     <Content Include="Views\Sean\DragAndDrop.cshtml" />
     <Content Include="Views\Home\WebWorker.cshtml" />
+    <Content Include="Views\Home\AngularTest.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -48,5 +48,10 @@ namespace HTML5_TechLearning.Controllers
             return View();
         }
 
+        public ActionResult AngularTest()
+        {
+            return View();
+        }
+
     }
 }
