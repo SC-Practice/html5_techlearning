@@ -1,10 +1,18 @@
 ﻿@{
-    ViewBag.Title = "Angular測試";
+    ViewBag.Title = "Angular1.0 測試";
 }
 
 <h2>@ViewBag.Title</h2>
 <hr>
-<div ng-app>
+<div ng-app="daniel_app">
+    <h4>練習4: Controller的使用: <strong>2016/1/13</strong></h4>
+    <div ng-controller="mycontroller">
+        {{msg}}
+    </div>
+    <br/>
+    <div>心得：controller一定要用規定的moduler寫法，早期直接用function的寫法已經不能用了。</div>
+    <hr>
+
     <h4>練習3: Angular的括弧運算式: <strong>2016/1/12</strong></h4>
     <p>{{1+1}} : 數字運算會直接顯示結果</p>
     <p>{{ 3000 | number }} : 當作number顯示, 會加上逗號</p>
@@ -32,4 +40,11 @@
 @section scripts
 {
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="@Url.Content("~/Scripts/Angular/daniel_app.js")"></script>
+    @*<script>
+        angular.module("myapp", [])
+        .controller("mycontroller", ["$scope", "$log", function ($scope, $log) {
+            $scope.msg = "test";
+        }]);
+    </script>*@
 }
