@@ -177,6 +177,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\LoadingIcon.css" />
     <Content Include="Content\Sean\BetterBoxes.css" />
     <Content Include="Content\Daniel.css" />
     <Content Include="Content\Images\b2blogo2.png" />
@@ -257,6 +258,7 @@
     <Content Include="Views\Sean\DragAndDrop.cshtml" />
     <Content Include="Views\Home\WebWorker.cshtml" />
     <Content Include="Views\Home\AngularTest.cshtml" />
+    <Content Include="Views\Home\LoadingIcon.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

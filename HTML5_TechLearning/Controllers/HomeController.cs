@@ -53,5 +53,9 @@ namespace HTML5_TechLearning.Controllers
             return View();
         }
 
+        public ActionResult LoadingIcon()
+        {
+            return View();
+        }
     }
 }
