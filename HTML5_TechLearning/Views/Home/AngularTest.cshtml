@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Angular1.0 測試";
+}
+
+<h2>@ViewBag.Title</h2>
+<hr>
+<div ng-app="daniel_app">
+    <h4>練習4: Controller的使用: <strong>2016/1/13</strong></h4>
+    <div ng-controller="mycontroller">
+        {{msg}}
+    </div>
+    <br/>
+    <div>心得：controller一定要用規定的moduler寫法，早期直接用function的寫法已經不能用了。</div>
+    <hr>
+
+    <h4>練習3: Angular的括弧運算式: <strong>2016/1/12</strong></h4>
+    <p>{{1+1}} : 數字運算會直接顯示結果</p>
+    <p>{{ 3000 | number }} : 當作number顯示, 會加上逗號</p>
+    <p>{{ 3000 | number:2 }} : number加上小數點兩位顯示</p>
+    <p>{{ "Hello World" | uppercase }} : 轉大寫</p>
+    <p>{{ "Hello World" | lowercase }} : 轉小寫</p>
+    <hr>
+
+    <h4>練習2: 計算金額: <strong>2016/1/12</strong></h4>
+    <label>商品金額:</label>
+    <input type="number" ng-model="price" placeholder="請輸入金額" ng-init="price=100">
+    <label>商品數量:</label>
+    <input type="number" ng-model="amount" placeholder="請輸入數量">
+    <h4>總金額為 {{price * amount || "0"}}。</h4>
+    <p>心得：學會用預設值替代NaN, 也學會如何幫model設定初值了，但還不知如何過濾負數。</p>
+    <hr>
+
+    <h4>練習1: 把Angular頁放在MVC的View中: <strong>2016/1/12</strong></h4>
+    <label>姓名:</label>
+    <input type="text" ng-model="yourname" placeholder="請輸入姓名">
+    <h4>Hello!! {{yourname}}</h4>
+    <p>心得:看來Angular的原理是用JS把原本的元素內容刷掉，如果重整的話會看到原本的內容一閃而過</p>
+</div>
+
+@section scripts
+{
+    <script src="@Url.Content("~/Scripts/Angular/1.4.8/angular.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/Angular/daniel_app.js")"></script>
+}

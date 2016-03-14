@@ -1,0 +1,27 @@
+﻿img {
+    position: absolute;
+    -moz-transition: opacity 6s;
+    -o-transition: opacity 6s;
+    -webkit-transition: opacity 6s;
+    transition: opacity 6s;
+}
+
+.solid {
+    opacity: 1;
+}
+
+.transparent {
+    opacity: 0;
+}
+
+button {
+    position: fixed;
+}
+
+    button.btn_toDay {
+        left: 10px;
+    }
+
+    button.btn_toNight {
+        left: 100px;
+    }
