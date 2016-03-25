@@ -164,7 +164,8 @@
 
 <!-- Map -->
 <section id="contact" class="map" style="display:none;">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.0378765471532!2d120.6357299150802!3d24.17040438438397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693df5d1f002bd%3A0xa75c3c2ad64470a9!2zNDA35Y-w5Lit5biC6KW_5bGv5Y2A5Y-w54Gj5aSn6YGT5LiJ5q61NjU46Jmf!5e0!3m2!1szh-TW!2stw!4v1458706350665" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <iframe id="gmap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.0378765471532!2d120.6357299150802!3d24.17040438438397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693df5d1f002bd%3A0xa75c3c2ad64470a9!2zNDA35Y-w5Lit5biC6KW_5bGv5Y2A5Y-w54Gj5aSn6YGT5LiJ5q61NjU46Jmf!5e0!3m2!1szh-TW!2stw!4v1458706350665"
+            scrolling="no" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 </section>
 
 
@@ -191,5 +192,13 @@
         function showMap() {
             $('#contact').show();
         }
+
+        $('.map').click(function () {
+            $(this).find('#gmap').css('pointer-events', 'auto');
+        })
+
+        $('#gmap').mouseleave(function () {
+            $(this).css('pointer-events', 'none');
+        })
     </script>
 }

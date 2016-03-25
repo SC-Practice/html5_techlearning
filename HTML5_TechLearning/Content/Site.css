@@ -13,8 +13,9 @@ body {
 }
 
 body {
-    font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
     /*font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;*/
+    font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
+    font-family: 'Noto Sans TC', sans-serif;
 }
 
 h1,
@@ -24,6 +25,7 @@ h4,
 h5,
 h6 {
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-family: 'Noto Sans TC', sans-serif;
 }
 
 p {
@@ -331,4 +333,9 @@ hr.small {
 
 footer {
     padding: 100px 0;
+}
+
+/* google map */
+#gmap {
+    pointer-events: none;
 }
