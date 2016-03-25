@@ -25,7 +25,9 @@ namespace HTML5_TechLearning
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/notosanstc.css",
+                      "~/Content/font-awesome/css/font-awesome.min.css"));
         }
     }
 }

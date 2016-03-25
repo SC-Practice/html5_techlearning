@@ -2,28 +2,203 @@
     ViewBag.Title = "HTML5 - Daily Task";
 }
 
-<div class="jumbotron">
-    <h1>HTML5 - Daily Task</h1>
-    <p class="lead">這個專案存放每個人的練習程式碼</p>
-</div>
+@section header{
+    <!-- Header -->
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <h1>B2B Frontend</h1>
+            <h3>Stay hungry, stay foolish.</h3>
+            <br>
+            <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
+        </div>
+    </header>
+}
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Sean的練習</h2>
-        <p>@Html.ActionLink("Transition »", "Transition", "Sean", null, new { @class = "btn btn-default" })</p>
-        <p>@Html.ActionLink("BetterBoxes »", "BetterBoxes", "Sean", null, new { @class = "btn btn-default" })</p>
-        <p>@Html.ActionLink("DragAndDrop »", "DragAndDrop", "Sean", null, new { @class = "btn btn-default" })</p>
+<!-- About -->
+<section id="about" class="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>HTML5 - Daily Task</h2>
+                <p class="lead">這個專案存放每個人的練習程式碼</p>
+            </div>
+        </div>
+        <!-- /.row -->
     </div>
-    <div class="col-md-4">
-        <h2>Daniel的練習</h2>
-        <p>@Html.ActionLink("雜項測試 »", "Daniel", "Home", null, new { @class = "btn btn-default" })</p>
-        <p>@Html.ActionLink("WebWorker »", "WebWorker", "Home", null, new { @class = "btn btn-default" })</p>
-        <p>@Html.ActionLink("TeamMember »", "TeamMember", "Home", null, new { @class = "btn btn-default" })</p>
-        <p>@Html.ActionLink("Angular1.0 測試 »", "AngularTest", "Home", null, new { @class = "btn btn-default" })</p>
-        <p>@Html.ActionLink("Loading Icon 測試 »", "LoadingIcon", "Home", null, new { @class = "btn btn-default" })</p>
+    <!-- /.container -->
+</section>
+
+<!-- Services -->
+<!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+<section id="services" class="services bg-primary">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>Our Practice</h2>
+                <hr class="small">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-item">
+                            <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-cloud fa-stack-1x text-primary"></i>
+                            </span>
+                            <h4>
+                                <strong>Sean的練習</strong>
+                            </h4>
+                            <p>@Html.ActionLink("Transition »", "Transition", "Sean", null, new { @class = "btn btn-light" })</p>
+                            <p>@Html.ActionLink("BetterBoxes »", "BetterBoxes", "Sean", null, new { @class = "btn btn-light" })</p>
+                            <p>@Html.ActionLink("DragAndDrop »", "DragAndDrop", "Sean", null, new { @class = "btn btn btn-light" })</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-item">
+                            <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-compass fa-stack-1x text-primary"></i>
+                            </span>
+                            <h4>
+                                <strong>Daniel的練習</strong>
+                            </h4>
+                            <p>@Html.ActionLink("雜項測試 »", "Daniel", "Home", null, new { @class = "btn btn-default" })</p>
+                            <p>@Html.ActionLink("WebWorker »", "WebWorker", "Home", null, new { @class = "btn btn-default" })</p>
+                            <p>@Html.ActionLink("TeamMember »", "TeamMember", "Home", null, new { @class = "btn btn-default" })</p>
+                            <p>@Html.ActionLink("Angular1.0 測試 »", "AngularTest", "Home", null, new { @class = "btn btn-default" })</p>
+                            <p>@Html.ActionLink("Loading Icon 測試 »", "LoadingIcon", "Home", null, new { @class = "btn btn-default" })</p>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-item">
+                            <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-flask fa-stack-1x text-primary"></i>
+                            </span>
+                            <h4>
+                                <strong>Chris的練習</strong>
+                            </h4>
+                            <p>@Html.ActionLink("進入點 »", "Index", "Home", null, new { @class = "btn btn-default" })</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.col-lg-10 -->
+        </div>
+        <!-- /.row -->
     </div>
-    <div class="col-md-4">
-        <h2>Chris的練習</h2>
-        <p>@Html.ActionLink("進入點 »", "Index", "Home", null, new { @class = "btn btn-default" })</p>
+    <!-- /.container -->
+</section>
+
+<!-- Portfolio -->
+<section id="portfolio" class="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+                <h2>堅強陣容</h2>
+                <hr class="small">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="portfolio-item">
+                            <a href="#">
+                                <img src="~/Content/Images/Photos/image5.JPG" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="portfolio-item">
+                            <a href="#">
+                                <img src="~/Content/Images/Photos/image3.JPG" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="portfolio-item">
+                            <a href="#">
+                                <img src="~/Content/Images/Photos/Chris.png" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="portfolio-item">
+                            <a href="#">
+                                <img src="~/Content/Images/Photos/S__3973127.jpg" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row (nested) -->                
+            </div>
+            <!-- /.col-lg-10 -->
+        </div>
+        <!-- /.row -->
     </div>
-</div>
+    <!-- /.container -->
+</section>
+
+<!-- Primary -->
+<section class="call-to-action bg-success" id="MoreSite">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h3>More More and More</h3>
+                <a href="http://www.testtool12.test.com.sh/" class="btn btn-lg btn-success" target="_blank">Item Tool</a>
+                <a href="http://10.16.133.102:929/" class="btn btn-lg btn-success" target="_blank">DR2</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<aside class="call-to-action bg-primary">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h3>Where we are</h3>
+                <a href="javasript:void(0);" onclick="showMap()" class="btn btn-lg btn-light">Click Me!</a>
+                <a href="javasript:void(0);" onclick="showMap()" class="btn btn-lg btn-dark">Look at Me!</a>
+            </div>
+        </div>
+    </div>
+</aside>
+
+<!-- Map -->
+<section id="contact" class="map" style="display:none;">
+    <iframe id="gmap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.0378765471532!2d120.6357299150802!3d24.17040438438397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693df5d1f002bd%3A0xa75c3c2ad64470a9!2zNDA35Y-w5Lit5biC6KW_5bGv5Y2A5Y-w54Gj5aSn6YGT5LiJ5q61NjU46Jmf!5e0!3m2!1szh-TW!2stw!4v1458706350665"
+            scrolling="no" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+</section>
+
+
+@section scripts{
+    <script>
+
+        // Scrolls to the selected menu item on the page
+        $(function () {
+            $('a[href*=#]:not([href=#])').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+
+        function showMap() {
+            $('#contact').show();
+        }
+
+        $('.map').click(function () {
+            $(this).find('#gmap').css('pointer-events', 'auto');
+        })
+
+        $('#gmap').mouseleave(function () {
+            $(this).css('pointer-events', 'none');
+        })
+    </script>
+}
